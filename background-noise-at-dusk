@@ -1,0 +1,24 @@
+lambda = 777.4*10^(-9);
+h = 6.626*10^(-34);
+c = 3.*10^8;
+PowerFromSun = 2644;
+VenusAlbedo = 0.76;
+Dusk = .3;
+minArea = 400.*300;
+maxArea = 2600.*1900;
+PowerMaxDistance = PowerFromSun*VenusAlbedo*Dusk*minArea;
+PowerMinDistance = PowerFromSun*VenusAlbedo*Dusk*maxArea;
+
+EphotonMinDist = h*c/lambda;
+PhotPerSecMinDistance = (PowerMinDistance)/EphotonMinDist * 1/12
+PhotonRateatSCMinDistance = PhotPerSecMinDistance / (4*Pi*(500)^2)
+
+PhotPerSecMinDistance = 3.10573*10^22
+PhotonRateatSCMinDistance = 9.88585*10^15
+
+EphotonMaxDist = h*c/lambda;
+PhotPerSecMaxDistance = (PowerMaxDistance)/EphotonMaxDist * 1/12
+PhotonRateatSCMaxDistance = PhotPerSecMaxDistance / (4*Pi*(500)^2)
+
+PhotPerSecMaxDistance = 7.54429*10^20
+PhotonRateatSCMaxDistance = 2.40142*10^14
